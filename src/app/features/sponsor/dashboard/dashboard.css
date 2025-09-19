@@ -1,0 +1,130 @@
+.dashboard-main {
+  flex: 1;
+  margin-left: 200px; /* espace sidebar */
+  margin-top: 70px;   /* espace navbar */
+  padding: 1rem;
+  min-height: calc(100vh - 60px);
+  background: #f5f7f5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #68b984;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* Stats */
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.stat-card {
+  flex: 1 1 calc(33% - 1rem);
+  min-width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Children */
+.children-section {
+  background-color: #CFFFE2;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.children-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.child-card {
+  width: 100%;         /* largeur fixe ou variable de la card */
+  background: #CFFFE2;
+  border-radius: 8px;
+  border: 2px solid #e5e4e440;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image qui occupe toute la largeur de la card */
+.child-card img {
+  
+  width: 100%;              /* prend toute la largeur */
+  height: 180px;            /* fixe une hauteur uniforme */
+  object-fit: cover;        /* recadre sans déformer */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.child-card h3,
+.child-card small,
+.child-card .child-location {
+  margin-left: 20px;
+  width: 100%;              /* pour que le texte prenne toute la largeur */
+  text-align: left;         /* aligné à gauche */
+}
+
+.profile-button {
+  text-align: center;
+  width: 80%;
+  padding: 0.6rem 1.2rem;
+  margin: 10px;
+  background-color: #68B984;  /* fond vert */
+  color: #fff;                 /* texte blanc */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.profile-button:hover {
+  background-color: #5a9e70;  /* vert plus foncé au survol */
+}
+
+/* Si tu veux toutes les images (stats et enfants) plus petites */
+.stat-icon img {
+  width: 30px;              /* réduit de 40px → 30px */
+  height: 30px;
+  object-fit: contain;
+}
+
+
+/* Activities */
+.activities-section {
+  margin-top: 2rem;
+}
+
+.activity-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+}
+.activity-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #68b984;
+  border-radius: 50%;
+}
