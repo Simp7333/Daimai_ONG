@@ -1,0 +1,162 @@
+.suivi-container {
+  flex: 1;
+  margin-left: 200px; /* espace sidebar */
+  margin-top: 70px;   /* espace navbar */
+  padding: 1rem;
+  min-height: calc(100vh - 60px);
+  background: #f5f7f5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ====== Cards ====== */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+}
+.card-label {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #393e46;
+}
+
+/* ====== Section ====== */
+.section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #393e46;
+}
+
+/* ====== Evolution ====== */
+.evolution {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.month {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.month span {
+  width: 50px;
+  font-weight: 500;
+}
+.bars {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+.bar {
+  height: 20px;
+  border-radius: 10px;
+}
+.bar.contributed {
+  background: #68b984;
+}
+.bar.spent {
+  background: #001bb7;
+}
+
+.legend {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.dot.green {
+  background: #68b984;
+}
+.dot.blue {
+  background: #001bb7;
+}
+
+/* ====== Répartition ====== */
+.repartition {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.repartition-item {
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 15px;
+}
+.repartition-item span {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+}
+.progress {
+  height: 20px;
+  background: #d9d9d9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.progress-bar.green {
+  background: #68b984;
+  height: 100%;
+}
+
+/* ====== Impact ====== */
+.resume-impact {
+  background: #cfffe2;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 14px rgba(207, 255, 226, 0.25);
+}
+.resume-impact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.impact-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.impact-stats div {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.impact-stats .value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #08cb00;
+}
+.impact-stats .label {
+  font-size: 1.2rem;
+  color: #393e46;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 992px) {
+  .stats, .impact-stats {
+    flex-direction: column;
+  }
+}

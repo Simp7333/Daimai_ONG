@@ -1,0 +1,76 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<main class="page-content">
+
+  <!-- Section Choisir un enfant -->
+  <div class="child-selection">
+    <div class="background-rectangle"></div>
+    <input class="child-input" placeholder="Choisir un enfant" readonly (click)="selectedChild = selectedChild ? null : 'open'">
+    <div class="child-dropdown" *ngIf="selectedChild === 'open'">
+      <div *ngFor="let child of children" (click)="selectedChild = child">{{child}}</div>
+    </div>
+  </div>
+
+  <!-- Titre -->
+  <h1 class="title">Rapports</h1>
+
+  <!-- Section Rapports -->
+  <section class="report-section">
+    <!-- Rapport de présence -->
+    <div class="report-card">
+      <div class="icon-circle">📄</div>
+      <div class="report-info">
+        <h3>Rapport de présence - Mai 2024</h3>
+        <p>22/10/2025 • Aminata</p>
+        <p>Absence : 2 jours/22</p>
+      </div>
+      <div class="actions">
+        <span class="view">👁️</span>
+        <span class="download">⬇️</span>
+      </div>
+    </div>
+
+    <!-- Bulletin scolaire -->
+    <div class="report-card">
+      <div class="icon-circle">📄</div>
+      <div class="report-info">
+        <h3>Bulletin scolaire - 2e trimestre</h3>
+        <p>22/10/2025 • Djiré</p>
+      </div>
+      <div class="actions">
+        <span class="view">👁️</span>
+        <span class="download">⬇️</span>
+      </div>
+    </div>
+
+    <!-- Photo d’activité -->
+    <div class="report-card">
+      <div class="icon-circle">📸</div>
+      <div class="report-info">
+        <h3>Photo d’activité - Mai 2024</h3>
+        <p>22/10/2025 • Amadou</p>
+        <p>Activité : Sport</p>
+      </div>
+      <div class="actions">
+        <span class="view">👁️</span>
+        <span class="download">⬇️</span>
+      </div>
+    </div>
+
+    <!-- Reçu de dépense -->
+    <div class="report-card">
+      <div class="icon-circle">💰</div>
+      <div class="report-info">
+        <h3>Reçu de dépense - Mai 2024</h3>
+        <p>22/10/2025 • Djeneba</p>
+        <p>Achat : fourniture scolaire, uniforme, frais scolaire</p>
+      </div>
+      <div class="actions">
+        <span class="view">👁️</span>
+        <span class="download">⬇️</span>
+      </div>
+    </div>
+  </section>
+
+</main>

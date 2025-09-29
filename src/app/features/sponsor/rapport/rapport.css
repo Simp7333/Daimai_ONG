@@ -1,0 +1,159 @@
+.page-content {
+  margin-top: 70px;   /* espace navbar */
+  margin-left: 250px; /* pour sidebar */
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Choisir un enfant */
+.child-selection {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.background-rectangle {
+  width: 100%;
+  height: 64px;
+  background: #fff;
+  border: 2px solid #D9D9D9;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.child-input {
+  position: relative;
+  width: 150px;
+  height: 23px;
+  top: 20px;
+  left: 20px;
+  border: none;
+  font-size: 19px;
+  font-weight: 200;
+  color: rgba(57, 62, 70, 0.5);
+  background: transparent;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.child-dropdown {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+.child-dropdown div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.child-dropdown div:hover {
+  background: #CFFFE2;
+}
+
+/* Titre */
+.title {
+  font-size: 60px;
+  font-weight: 500;
+  margin: 50px 0 30px 0;
+  color: #000;
+}
+
+/* Section Rapports */
+.report-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Carte de rapport */
+.report-card {
+  display: flex;
+  align-items: center;
+  background: rgba(217, 217, 217, 0.3);
+  border-radius: 10px;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background: rgba(104, 185, 132, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.report-info h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+}
+
+.report-info p {
+  font-size: 20px;
+  font-weight: 200;
+  margin: 0;
+}
+
+/* Actions */
+.actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Responsivité */
+@media screen and (max-width: 1400px) {
+  .page-content {
+    margin-left: 200px;
+  }
+
+  .child-selection {
+    max-width: 90%;
+  }
+
+  .report-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .child-input {
+    width: 100%;
+  }
+
+  .report-card {
+    padding: 10px;
+  }
+}

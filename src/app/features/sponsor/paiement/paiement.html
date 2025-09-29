@@ -1,0 +1,127 @@
+
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<main class="page-content">
+<div class="payment-container">
+  <!-- Section méthodes -->
+  <section class="methods">
+    <h2>Méthode de paiement</h2>
+    <div class="method-card"  [class.active]="selectedMethod === 'carte'"
+         (click)="choisir('carte')">
+      <div class="icon">💳</div>
+      <div>
+        <h3>Carte bancaire</h3>
+        <p>Visa, MasterCard, American Express</p>
+      </div>
+      <div class="secure">🔒</div>
+    </div>
+
+    <div class="method-card"  [class.active]="selectedMethod === 'mobile'"
+         (click)="choisir('mobile')">
+      <div class="icon">📱</div>
+      <div>
+        <h3>Mobile Money</h3>
+        <p>Orange Money, Moov Money, Wave</p>
+      </div>
+      <div class="secure">🔒</div>
+    </div>
+
+    <div class="method-card" [class.active]="selectedMethod === 'paypal'"
+         (click)="choisir('paypal')">
+      <div class="icon">💲</div>
+      <div>
+        <h3>Paypal</h3>
+        <p>Connexion sécurisée via PayPal</p>
+      </div>
+      <div class="secure">🔒</div>
+    </div>
+  </section>
+
+  <!-- Section détails carte -->
+  <section class="card-details">
+    <h2>Détails du paiement</h2>
+    <!-- Carte bancaire -->
+    @if (selectedMethod === 'carte') {
+      <form>
+        <label>Numéro de carte</label>
+        <input type="text" placeholder="1234 5678 9123 4567" />
+
+        <div class="row">
+          <div>
+            <label>Date d’expiration</label>
+            <input type="text" placeholder="MM/AA" />
+          </div>
+          <div>
+            <label>CVV</label>
+            <input type="text" placeholder="123" />
+          </div>
+        </div>
+
+        <label>Nom du titulaire</label>
+        <input type="text" placeholder="Aïssatou Coulibaly" />
+
+        <div class="summary">
+          <p>Montant : <span>50.000 FCFA</span></p>
+          <p>Frais de traitement : <span>0 FCFA</span></p>
+          <hr />
+          <p class="total">Total : <span>50.000 FCFA</span></p>
+        </div>
+
+        <button type="submit">Confirmer le paiement</button>
+      </form>
+    }
+
+    <!-- Mobile Money -->
+    @if (selectedMethod === 'mobile') {
+      <form>
+        <label>Votre numéro de téléphone</label>
+        <input type="text" placeholder="+223 12345678" />
+
+        <div class="summary">
+          <p>Montant : <span>50.000 FCFA</span></p>
+          <p>Frais de traitement : <span>1.000 FCFA</span></p>
+          <hr />
+          <p class="total">Total : <span>51.000 FCFA</span></p>
+        </div>
+
+        <button type="submit">Confirmer le paiement</button>
+      </form>
+    }
+
+    <!-- Paypal -->
+    @if (selectedMethod === 'paypal') {
+      <div style="text-align:center">
+        <p>Vous serez redirigé vers PayPal pour finaliser votre paiement en toute sécurité.</p>
+        <button type="button">Payer avec PayPal</button>
+      </div>
+    }
+  </section>
+</div>
+
+<!-- Section historique -->
+<section class="history">
+  <h2>Historique des paiements</h2>
+  <div class="history-item">
+    <div class="amount">50.000 FCFA</div>
+    <div class="info">
+      <p>Aminata</p>
+      <span>20/10/2025 • 12:53</span>
+    </div>
+    <div class="actions">
+      👁️ ⬇️
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="amount">40.000 FCFA</div>
+    <div class="info">
+      <p>Djeneba</p>
+      <span>10/10/2025 • 20:30</span>
+    </div>
+    <div class="actions">
+      👁️ ⬇️
+    </div>
+  </div>
+</section>
+</main>

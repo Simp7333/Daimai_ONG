@@ -1,0 +1,186 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* pas de scroll */
+}
+.logo {
+  position: absolute;
+  top: 20px;   /* distance du haut */
+  left: 30px; /* distance de la droite */
+  z-index: 2000; /* au-dessus du reste */
+}
+
+.logo img {
+  max-width: 200px; /* adapte la taille */
+  height: auto;
+}
+
+/* ===== Container principal ===== */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 200px;
+}
+.register-container {
+  position: relative;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  height: auto; /* prend presque tout l’écran */
+  background: rgba(207, 255, 226, 0.2);
+  border: 1px solid #D9D9D9;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* ===== Partie gauche (formulaire) ===== */
+.form-section {
+  flex: 1;
+  padding: 30px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.form-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1F3426;
+  margin-bottom: 6px;
+}
+.form-header p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #1F3426;
+  margin-bottom: 20px;
+}
+
+/* Décoration cercle avec cœur */
+.decoration {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.circle {
+  width: 120px;
+  height: 120px;
+  background: #68B984;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heart-icon {
+  font-size: 50px;
+  color: #fff;
+}
+
+/* Onglets Connexion / Inscription */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.tab {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  background: #fff;
+  color: #1F3426;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tab.active {
+  background: #cfffe2;
+  font-weight: 600;
+}
+
+/* Champs du formulaire */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-group label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #1F3426;
+  margin-bottom: 4px;
+  display: block;
+}
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  font-size: 13px;
+  color: #1F3426;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+}
+.form-group input::placeholder {
+  color: rgba(31,52,38,0.6);
+}
+.two-cols {
+  display: flex;
+  gap: 10px;
+}
+.two-cols div {
+  flex: 1;
+}
+
+/* Bouton */
+.btn-register {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #68B984;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.btn-register:hover {
+  background: #57a174;
+  transform: translateY(-1px);
+}
+
+/* ===== Partie droite (image) ===== */
+.image-section {
+  flex: 1;
+  background: url("/assets/images/Rectangle.png") no-repeat center center/cover;
+  border-radius: 0px 20px 20px 0px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .register-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .image-section {
+    height: 200px;
+    border-radius: 0 0 20px 20px;
+  }
+}

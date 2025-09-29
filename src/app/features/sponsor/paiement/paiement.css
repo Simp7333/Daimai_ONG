@@ -1,0 +1,160 @@
+/* --- Reset / structure --- */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: var(--color-bg, #f5f7f5);
+}
+
+.page-content {
+  margin-top: 70px;   /* hauteur navbar */
+  margin-left: 200px; /* largeur sidebar */
+  padding: 1rem;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: margin 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* --- Payment layout --- */
+.payment-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.methods {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.methods h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.method-card {
+  background: #fff;
+  border: 3px solid #d9d9d9;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.method-card.active {
+  background: rgba(207, 255, 226, 0.4);
+  border-color: #68b984;
+}
+
+.card-details {
+  flex: 1 1 400px;
+  background: #fff;
+  border: 3px solid #d9d9d9;
+  border-radius: 20px;
+  padding: 30px;
+  min-width: 0;
+}
+
+.card-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.card-details form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.card-details input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary {
+  margin-top: 20px;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.summary .total {
+  font-weight: bold;
+  color: #68b984;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  background: #68b984;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* --- Historique --- */
+.history {
+  margin-top: 50px;
+  background: rgba(207, 255, 226, 0.2);
+  border: 2px solid #68b984;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.history h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.history-item {
+  background: rgba(217, 217, 217, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.amount {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.info span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .page-content {
+    margin-left: 0; /* sidebar masquée */
+  }
+
+  .payment-container {
+    flex-direction: column;
+  }
+}

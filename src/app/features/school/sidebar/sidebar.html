@@ -1,0 +1,37 @@
+<!-- Sidebar -->
+<aside class="sidebar" role="navigation" aria-label="Menu principal">
+  <nav class="menu">
+    <a routerLink="/dashboard" routerLinkActive="active" class="menu-item" [routerLinkActiveOptions]="{ exact: true }">
+      <i class="fa-solid fa-house"></i> Accueil
+    </a>
+    <a routerLink="/parrainer" routerLinkActive="active" class="menu-item">
+      <i class="fa-regular fa-heart"></i> Parrainer
+    </a>
+    <a routerLink="/suivi" routerLinkActive="active" class="menu-item">
+      <i class="fa-solid fa-eye"></i> Suivi
+    </a>
+    <a routerLink="/paiement" routerLinkActive="active" class="menu-item">
+      <i class="fa-solid fa-credit-card"></i> Paiement
+    </a>
+    <a routerLink="/rapport" routerLinkActive="active" class="menu-item">
+      <i class="fa-solid fa-chart-bar"></i> Rapport
+    </a>
+    <a routerLink="/parametres" routerLinkActive="active" class="menu-item">
+      <i class="fa-solid fa-gear"></i> Paramètres
+    </a>
+  </nav>
+
+  <div class="share-section">
+    <p>Partagez ce lien et changez encore plus de vies !</p>
+    <button class="copy-link-button">Copier le lien</button>
+  </div>
+
+  <div class="deconnexion">
+    <a routerLink="/login" class="menu-item logout-btn">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span>Déconnexion</span>
+    </a>
+  </div>
+
+
+</aside>

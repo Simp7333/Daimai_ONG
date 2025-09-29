@@ -1,10 +1,17 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Navbar} from '../navbar/navbar';
+import {Sidebar} from '../sidebar/sidebar';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  standalone: true,
+  imports: [
+    Navbar,
+    Sidebar
+  ],
   templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css'
+  styleUrls: [ './dashboard.css']
 })
 export class Dashboard {
 
