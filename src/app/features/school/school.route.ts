@@ -4,14 +4,14 @@ import { Dashboard } from './dashboard/dashboard';
 import {GestionEnfant} from './gestion-enfant/gestion-enfant';
 import {SuiviFinancier} from './suivi-financier/suivi-financier';
 import {Rapport} from './rapport/rapport';
-import {Parametre} from './parametre/parametre';
+import {Parametre} from '../school/parametre/parametre';
 
 const routes: Routes = [
-  { path: 'schooldashboard', component: Dashboard },
+  { path: 'dashboard', component: Dashboard },
   { path: 'gestion_enfant', component: GestionEnfant },
   { path: 'suivi_financier', component: SuiviFinancier },
   { path: 'rapport', component: Rapport },
-  { path: 'parametres', component: Parametre },
+  { path: 'parametre', component: Parametre },
 ];
 
 @NgModule({

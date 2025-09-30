@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import {Sidebar} from '../sidebar/sidebar';
+import {Navbar} from '../navbar/navbar';
 
 @Component({
   selector: 'app-parametre',
-  imports: [],
+  standalone: true,
+  imports: [Sidebar, Navbar],
   templateUrl: './parametre.html',
-  styleUrl: './parametre.css'
+  styleUrls: ['./parametre.css'],
 })
 export class Parametre {
 

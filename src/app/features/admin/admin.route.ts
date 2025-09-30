@@ -1,7 +1,7 @@
 import {RouterModule, Routes} from '@angular/router';
-import {Dashboard} from '../admin/dashboard/dashboard';
+import {Dashboard} from './dashboard/dashboard';
 import {NgModule} from '@angular/core';
-import {Parametre} from '../admin/parametre/parametre';
+import {Parametre} from './parametre/parametre';
 import {GestionFinance} from "./gestion-finance/gestion-finance";
 import {GestionOng} from "./gestion-ong/gestion-ong";
 import {GestionUsers} from "./gestion-users/gestion-users";

@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import {Navbar} from '../navbar/navbar';
+import {Sidebar} from '../sidebar/sidebar';
 
 @Component({
   selector: 'app-suivi-financier',
-  imports: [],
+  standalone: true,
+  imports: [Navbar, Sidebar],
   templateUrl: './suivi-financier.html',
-  styleUrl: './suivi-financier.css'
+  styleUrls: ['./suivi-financier.css'],
 })
 export class SuiviFinancier {
 

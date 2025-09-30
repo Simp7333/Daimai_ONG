@@ -1,6 +1,6 @@
 import {RouterModule, Routes} from '@angular/router';
 import {Dashboard} from '../sponsor/dashboard/dashboard';
-import {Rapport} from '../school/rapport/rapport';
+import {Rapport} from '../sponsor/rapport/rapport';
 import {NgModule} from '@angular/core';
 import {Parrainer} from './parrainer/parrainer';
 import {Suivi} from './suivi/suivi';

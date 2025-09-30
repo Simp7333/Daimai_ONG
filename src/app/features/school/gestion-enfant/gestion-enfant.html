@@ -1,1 +1,178 @@
-<p>gestion-enfant works!</p>
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<!-- Gestion des enfants - Template -->
+<div class="kids-page">
+
+  <!-- En-tête : recherche + filtres + bouton ajouter -->
+  <div class="controls">
+    <div class="search-group">
+      <input type="search" placeholder="Rechercher un enfant" aria-label="Rechercher un enfant" class="search-input" />
+      <select class="filter">
+        <option value="all">Tous</option>
+        <option value="sponsored">Enfants parrainés</option>
+        <option value="funds">Fond reçu</option>
+        <option value="expenses">Dépenses</option>
+        <option value="reports">Rapports</option>
+      </select>
+    </div>
+
+    <div class="action-group">
+      <button routerLink="/school/enfant/ajouter" class="btn btn-primary">
+        <span class="plus">＋</span> Ajouter un enfant
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-value">50</div>
+      <div class="stat-label">Enfants</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">900.000 <span class="currency">fcfa</span></div>
+      <div class="stat-label">Fonds reçus</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">700.000 <span class="currency">fcfa</span></div>
+      <div class="stat-label">Dépenses</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">60</div>
+      <div class="stat-label">Parrains</div>
+    </div>
+  </div>
+
+  <!-- Table / Liste -->
+  <div class="list-card">
+    <div class="list-header">
+      <h2>Enfants</h2>
+      <div class="list-actions">
+        <button class="btn small">Exporter</button>
+        <button class="btn small">Filtrer</button>
+      </div>
+    </div>
+
+    <!-- Desktop table -->
+    <table class="kids-table" role="table" aria-label="Liste des enfants">
+      <thead>
+      <tr>
+        <th>Enfants</th>
+        <th>Parrains</th>
+        <th>Besoins</th>
+        <th>Infos</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td class="child-cell">
+          <div class="avatar">FD</div>
+          <div class="child-meta">
+            <div class="name">Fatoumata Diallo</div>
+          </div>
+        </td>
+        <td>Aminata Touré</td>
+        <td>
+          <span class="badge">Inscription</span>
+          <span class="badge">Cantine</span>
+          <span class="badge">Fournitures</span>
+        </td>
+        <td class="muted">12 ans · inscrit le 10/10/2024</td>
+        <td class="actions">
+          <a routerLink="/school/enfant/1" class="action">Voir</a>
+          <a routerLink="/school/enfant/1/edit" class="action">Modifier</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="child-cell">
+          <div class="avatar">AC</div>
+          <div class="child-meta">
+            <div class="name">Alimatou Cissé</div>
+          </div>
+        </td>
+        <td>Cheick Diarra</td>
+        <td>
+          <span class="badge">Santé</span>
+          <span class="badge">Fournitures</span>
+        </td>
+        <td class="muted">7 ans · inscrit le 10/10/2024</td>
+        <td class="actions">
+          <a routerLink="/school/enfant/2" class="action">Voir</a>
+          <a routerLink="/school/enfant/2/edit" class="action">Modifier</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="child-cell">
+          <div class="avatar">SD</div>
+          <div class="child-meta">
+            <div class="name">Seydou Djiré</div>
+          </div>
+        </td>
+        <td>Aïssatou Coulibaly</td>
+        <td>
+          <span class="badge">Inscription</span>
+          <span class="badge">Cantine</span>
+          <span class="badge">Fournitures</span>
+        </td>
+        <td class="muted">9 ans · inscrit le 10/10/2024</td>
+        <td class="actions">
+          <a routerLink="/school/enfant/3" class="action">Voir</a>
+          <a routerLink="/school/enfant/3/edit" class="action">Modifier</a>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="child-cell">
+          <div class="avatar">BS</div>
+          <div class="child-meta">
+            <div class="name">Boubacar Sidibé</div>
+          </div>
+        </td>
+        <td>Rosaline Tamboura</td>
+        <td>
+          <span class="badge">Inscription</span>
+          <span class="badge">Cantine</span>
+          <span class="badge">Santé</span>
+        </td>
+        <td class="muted">15 ans · inscrit le 10/10/2024</td>
+        <td class="actions">
+          <a routerLink="/school/enfant/4" class="action">Voir</a>
+          <a routerLink="/school/enfant/4/edit" class="action">Modifier</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+    <!-- Mobile: cards -->
+    <div class="cards-list">
+      <!-- item 1 -->
+      <article class="kid-card">
+        <header class="kid-top">
+          <div class="avatar">FD</div>
+          <div class="kid-head">
+            <div class="name">Fatoumata Diallo</div>
+            <div class="muted">12 ans · inscrit le 10/10/2024</div>
+          </div>
+        </header>
+        <div class="kid-body">
+          <div><strong>Parrain :</strong> Aminata Touré</div>
+          <div class="badges">
+            <span class="badge">Inscription</span>
+            <span class="badge">Cantine</span>
+            <span class="badge">Fournitures</span>
+          </div>
+        </div>
+        <footer class="kid-actions">
+          <a routerLink="/school/enfant/1" class="action">Voir</a>
+          <a routerLink="/school/enfant/1/edit" class="action">Modifier</a>
+        </footer>
+      </article>
+
+      <!-- (Tu peux cloner les cartes pour chaque enfant ou générer dynamiquement) -->
+    </div>
+  </div>
+</div>

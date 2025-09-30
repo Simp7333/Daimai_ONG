@@ -1,6 +1,6 @@
 .dashboard-main {
   flex: 1;
-  margin-left: 200px; /* espace sidebar */
+  margin-left: 210px; /* espace sidebar */
   margin-top: 70px;   /* espace navbar */
   padding: 1rem;
   min-height: calc(100vh - 60px);
@@ -66,7 +66,7 @@
 
 /* Image qui occupe toute la largeur de la card */
 .child-card img {
-  
+
   width: 100%;              /* prend toute la largeur */
   height: 180px;            /* fixe une hauteur uniforme */
   object-fit: cover;        /* recadre sans déformer */
@@ -128,3 +128,5 @@
   background-color: #68b984;
   border-radius: 50%;
 }
+
+

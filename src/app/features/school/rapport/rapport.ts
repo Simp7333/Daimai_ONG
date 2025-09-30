@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import {RouterLink} from '@angular/router';
+import {Navbar} from '../navbar/navbar';
+import {Sidebar} from '../sidebar/sidebar';
 
 @Component({
   selector: 'app-rapport',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink, Navbar, Sidebar],
   templateUrl: './rapport.html',
-  styleUrl: './rapport.css'
+  styleUrls: ['./rapport.css'],
 })
 export class Rapport {
 

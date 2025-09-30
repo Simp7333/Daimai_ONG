@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import {Navbar} from '../navbar/navbar';
+import {Sidebar} from '../sidebar/sidebar';
 
 @Component({
   selector: 'app-gestion-users',
-  imports: [],
+  standalone: true,
+  imports: [Navbar, Sidebar],
   templateUrl: './gestion-users.html',
-  styleUrl: './gestion-users.css'
+  styleUrls: ['./gestion-users.css'],
 })
 export class GestionUsers {
 
