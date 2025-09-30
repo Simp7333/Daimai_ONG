@@ -21,7 +21,8 @@
               "src/assets"  
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/remixicon/fonts/remixicon.css"
             ],
             "server": "src/main.server.ts",
             "outputMode": "server",
@@ -65,6 +66,27 @@
           },
           "defaultConfiguration": "development"
         },
+      "server": {
+  "builder": "@angular-devkit/build-angular:ssr",
+      "options": {
+      "outputPath": "dist/Deme/server",
+      "main": "src/server.ts",
+      "tsConfig": "tsconfig.server.json"
+      },
+      "configurations": {
+      "production": {
+        "outputPath": "dist/Deme/server",
+        "main": "src/server.ts",
+        "tsConfig": "tsconfig.server.json"
+      },
+      "development": {
+        "outputPath": "dist/Deme/server",
+        "main": "src/server.ts",
+        "tsConfig": "tsconfig.server.json"
+      }
+      },
+      "defaultConfiguration": "production"
+    }
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },

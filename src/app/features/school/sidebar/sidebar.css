@@ -89,7 +89,6 @@
   box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Responsive (sidebar cachée sur mobile et transformée en menu burger) */
 @media (max-width: 768px) {
   .sidebar {
     width: 180px;
